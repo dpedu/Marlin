@@ -1482,7 +1482,7 @@
  *
  * Override the default value based on the driver type set in Configuration.h.
  */
-//#define MINIMUM_STEPPER_PULSE 2
+#define MINIMUM_STEPPER_PULSE 1
 
 /**
  * Maximum stepping rate (in Hz) the stepper driver allows
@@ -1819,91 +1819,91 @@
   #define INTERPOLATE       true  // Interpolate X/Y/Z_MICROSTEPS to 256
 
   #if AXIS_IS_TMC(X)
-    #define X_CURRENT     800  // (mA) RMS current. Multiply by 1.414 for peak current.
+    #define X_CURRENT     600  // (mA) RMS current. Multiply by 1.414 for peak current.
     #define X_MICROSTEPS   16  // 0..256
     #define X_RSENSE     0.11
     #define X_CHAIN_POS    -1  // <=0 : Not chained. 1 : MCU MOSI connected. 2 : Next in chain, ...
   #endif
 
   #if AXIS_IS_TMC(X2)
-    #define X2_CURRENT    800
+    #define X2_CURRENT    600
     #define X2_MICROSTEPS  16
     #define X2_RSENSE    0.11
     #define X2_CHAIN_POS   -1
   #endif
 
   #if AXIS_IS_TMC(Y)
-    #define Y_CURRENT     800
+    #define Y_CURRENT     600
     #define Y_MICROSTEPS   16
     #define Y_RSENSE     0.11
     #define Y_CHAIN_POS    -1
   #endif
 
   #if AXIS_IS_TMC(Y2)
-    #define Y2_CURRENT    800
+    #define Y2_CURRENT    600
     #define Y2_MICROSTEPS  16
     #define Y2_RSENSE    0.11
     #define Y2_CHAIN_POS   -1
   #endif
 
   #if AXIS_IS_TMC(Z)
-    #define Z_CURRENT     800
+    #define Z_CURRENT     600
     #define Z_MICROSTEPS   16
     #define Z_RSENSE     0.11
     #define Z_CHAIN_POS    -1
   #endif
 
   #if AXIS_IS_TMC(Z2)
-    #define Z2_CURRENT    800
+    #define Z2_CURRENT    600
     #define Z2_MICROSTEPS  16
     #define Z2_RSENSE    0.11
     #define Z2_CHAIN_POS   -1
   #endif
 
   #if AXIS_IS_TMC(Z3)
-    #define Z3_CURRENT    800
+    #define Z3_CURRENT    600
     #define Z3_MICROSTEPS  16
     #define Z3_RSENSE    0.11
     #define Z3_CHAIN_POS   -1
   #endif
 
   #if AXIS_IS_TMC(E0)
-    #define E0_CURRENT    800
+    #define E0_CURRENT    600
     #define E0_MICROSTEPS  16
     #define E0_RSENSE    0.11
     #define E0_CHAIN_POS   -1
   #endif
 
   #if AXIS_IS_TMC(E1)
-    #define E1_CURRENT    800
+    #define E1_CURRENT    600
     #define E1_MICROSTEPS  16
     #define E1_RSENSE    0.11
     #define E1_CHAIN_POS   -1
   #endif
 
   #if AXIS_IS_TMC(E2)
-    #define E2_CURRENT    800
+    #define E2_CURRENT    600
     #define E2_MICROSTEPS  16
     #define E2_RSENSE    0.11
     #define E2_CHAIN_POS   -1
   #endif
 
   #if AXIS_IS_TMC(E3)
-    #define E3_CURRENT    800
+    #define E3_CURRENT    600
     #define E3_MICROSTEPS  16
     #define E3_RSENSE    0.11
     #define E3_CHAIN_POS   -1
   #endif
 
   #if AXIS_IS_TMC(E4)
-    #define E4_CURRENT    800
+    #define E4_CURRENT    600
     #define E4_MICROSTEPS  16
     #define E4_RSENSE    0.11
     #define E4_CHAIN_POS   -1
   #endif
 
   #if AXIS_IS_TMC(E5)
-    #define E5_CURRENT    800
+    #define E5_CURRENT    600
     #define E5_MICROSTEPS  16
     #define E5_RSENSE    0.11
     #define E5_CHAIN_POS   -1
@@ -2022,21 +2022,21 @@
    * STEALTHCHOP_(XY|Z|E) must be enabled to use HYBRID_THRESHOLD.
    * M913 X/Y/Z/E to live tune the setting
    */
-  //#define HYBRID_THRESHOLD
+  #define HYBRID_THRESHOLD
 
-  #define X_HYBRID_THRESHOLD     100  // [mm/s]
-  #define X2_HYBRID_THRESHOLD    100
-  #define Y_HYBRID_THRESHOLD     100
-  #define Y2_HYBRID_THRESHOLD    100
+  #define X_HYBRID_THRESHOLD     150  // [mm/s]
+  #define X2_HYBRID_THRESHOLD    150
+  #define Y_HYBRID_THRESHOLD     150
+  #define Y2_HYBRID_THRESHOLD    150
   #define Z_HYBRID_THRESHOLD       3
   #define Z2_HYBRID_THRESHOLD      3
   #define Z3_HYBRID_THRESHOLD      3
-  #define E0_HYBRID_THRESHOLD     30
-  #define E1_HYBRID_THRESHOLD     30
-  #define E2_HYBRID_THRESHOLD     30
-  #define E3_HYBRID_THRESHOLD     30
-  #define E4_HYBRID_THRESHOLD     30
-  #define E5_HYBRID_THRESHOLD     30
+  #define E0_HYBRID_THRESHOLD     10
+  #define E1_HYBRID_THRESHOLD     10
+  #define E2_HYBRID_THRESHOLD     10
+  #define E3_HYBRID_THRESHOLD     10
+  #define E4_HYBRID_THRESHOLD     10
+  #define E5_HYBRID_THRESHOLD     10
 
   /**
    * Use StallGuard2 to home / probe X, Y, Z.
@@ -2093,7 +2093,7 @@
    * Enable M122 debugging command for TMC stepper drivers.
    * M122 S0/1 will enable continous reporting.
    */
-  //#define TMC_DEBUG
+  #define TMC_DEBUG
 
   /**
    * You can set your own advanced settings by filling in predefined functions.
