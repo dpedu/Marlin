@@ -116,7 +116,7 @@
 #define X_DIR_PIN          P2_06
 #define X_ENABLE_PIN       P2_01
 #ifndef X_CS_PIN
-  #define X_CS_PIN         P1_17
+  #define X_CS_PIN         P1_10
 #endif
 
 #define Y_STEP_PIN         P0_19
@@ -192,18 +192,8 @@
   //
   // Software serial
   //
-<<<<<<< HEAD:Marlin/src/pins/lpc1768/pins_BTT_SKR_V1_4.h
-<<<<<<< HEAD:Marlin/src/pins/lpc1768/pins_BTT_SKR_V1_4.h
   #define X_SERIAL_TX_PIN  P1_10
   #define X_SERIAL_RX_PIN  P1_10
-=======
-  #define X_SERIAL_TX_PIN  P1_04
-  #define X_SERIAL_RX_PIN  P1_01
->>>>>>> swap X onto E1 for dead axis workaround:Marlin/src/pins/lpc1768/pins_BIGTREE_SKR_V1.3.h
-=======
-  #define X_SERIAL_TX_PIN  P4_29
-  #define X_SERIAL_RX_PIN  P1_17
->>>>>>> Revert "swap X onto E1 for dead axis workaround":Marlin/src/pins/lpc1768/pins_BIGTREE_SKR_V1.3.h
 
   #define Y_SERIAL_TX_PIN  P1_09
   #define Y_SERIAL_RX_PIN  P1_09
@@ -214,18 +204,8 @@
   #define E0_SERIAL_TX_PIN P1_04
   #define E0_SERIAL_RX_PIN P1_04
 
-<<<<<<< HEAD:Marlin/src/pins/lpc1768/pins_BTT_SKR_V1_4.h
-<<<<<<< HEAD:Marlin/src/pins/lpc1768/pins_BTT_SKR_V1_4.h
   #define E1_SERIAL_TX_PIN P1_01
   #define E1_SERIAL_RX_PIN P1_01
-=======
-  #define E1_SERIAL_TX_PIN P4_29
-  #define E1_SERIAL_RX_PIN P1_17
->>>>>>> swap X onto E1 for dead axis workaround:Marlin/src/pins/lpc1768/pins_BIGTREE_SKR_V1.3.h
-=======
-  #define E1_SERIAL_TX_PIN P1_04
-  #define E1_SERIAL_RX_PIN P1_01
->>>>>>> Revert "swap X onto E1 for dead axis workaround":Marlin/src/pins/lpc1768/pins_BIGTREE_SKR_V1.3.h
 
   #define Z2_SERIAL_TX_PIN P1_01
   #define Z2_SERIAL_RX_PIN P1_01
