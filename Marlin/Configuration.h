@@ -756,7 +756,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 5000, 500, 50, 5000 } // XXX
+#define DEFAULT_MAX_ACCELERATION      { 5000, 800, 50, 5000 } // XXX Y used to be 500
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -1088,10 +1088,14 @@
 // @section machine
 
 // The size of the print bed
+
+// endtable glass bed (2 tape widths)
+#define X_BED_SIZE 200
+#define Y_BED_SIZE 320
+
+// Maximum size
 // #define X_BED_SIZE 700
-// #define Y_BED_SIZE 1770
-#define X_BED_SIZE 300
-#define Y_BED_SIZE 300
+// #define Y_BED_SIZE 1780
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
